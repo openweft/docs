@@ -1,9 +1,14 @@
-# Modules
+---
+title: "Modules"
+weight: 20
+---
+
+# Modules {#modules}
 
 The 70 modules of **openweft**, grouped by what they are for. Each links to
 its source and to its generated API reference.
 
-## The core
+## The core {#the-core}
 
 | Module | Reference |
 | --- | --- |
@@ -13,7 +18,7 @@ its source and to its generated API reference.
 | [`weft-hcl`](https://github.com/openweft/weft-hcl) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-hcl) |
 | [`weft-proto`](https://github.com/openweft/weft-proto) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-proto) |
 
-## microVMs and their drivers
+## microVMs and their drivers {#microvms-and-their-drivers}
 
 | Module | Reference |
 | --- | --- |
@@ -32,7 +37,7 @@ its source and to its generated API reference.
 | [`weft-microvm-init`](https://github.com/openweft/weft-microvm-init) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-microvm-init) |
 | [`weft-microvm-kernel`](https://github.com/openweft/weft-microvm-kernel) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-microvm-kernel) |
 
-## Storage
+## Storage {#storage}
 
 | Module | Reference |
 | --- | --- |
@@ -41,7 +46,7 @@ its source and to its generated API reference.
 | [`weft-nbd`](https://github.com/openweft/weft-nbd) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-nbd) |
 | [`weft-volume-backup`](https://github.com/openweft/weft-volume-backup) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-volume-backup) |
 
-## Network
+## Network {#network}
 
 | Module | Reference |
 | --- | --- |
@@ -51,7 +56,7 @@ its source and to its generated API reference.
 | [`weft-proxy`](https://github.com/openweft/weft-proxy) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-proxy) |
 | [`weft-router`](https://github.com/openweft/weft-router) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-router) |
 
-## Coordination, identity and messaging
+## Coordination, identity and messaging {#coordination-identity-and-messaging}
 
 | Module | Reference |
 | --- | --- |
@@ -61,7 +66,7 @@ its source and to its generated API reference.
 | [`weft-slognats`](https://github.com/openweft/weft-slognats) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-slognats) |
 | [`weft-zot`](https://github.com/openweft/weft-zot) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-zot) |
 
-## High-availability services
+## High-availability services {#high-availability-services}
 
 | Module | Reference |
 | --- | --- |
@@ -69,7 +74,7 @@ its source and to its generated API reference.
 | [`weft-ha-irods`](https://github.com/openweft/weft-ha-irods) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-ha-irods) |
 | [`weft-ha-postgresql`](https://github.com/openweft/weft-ha-postgresql) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-ha-postgresql) |
 
-## CI runners
+## CI runners {#ci-runners}
 
 | Module | Reference |
 | --- | --- |
@@ -77,7 +82,7 @@ its source and to its generated API reference.
 | [`weft-runner-github`](https://github.com/openweft/weft-runner-github) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-runner-github) |
 | [`weft-runner-gitlab`](https://github.com/openweft/weft-runner-gitlab) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-runner-gitlab) |
 
-## Clients, apps and integrations
+## Clients, apps and integrations {#clients-apps-and-integrations}
 
 | Module | Reference |
 | --- | --- |
@@ -92,7 +97,7 @@ its source and to its generated API reference.
 | [`weft-tui`](https://github.com/openweft/weft-tui) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-tui) |
 | [`weft-webui`](https://github.com/openweft/weft-webui) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-webui) |
 
-## The loom editor
+## The loom editor {#the-loom-editor}
 
 | Module | Reference |
 | --- | --- |

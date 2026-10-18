@@ -1,4 +1,9 @@
-# weft
+---
+title: "Overview"
+weight: 10
+---
+
+# weft {#weft}
 
 weft — a Go-native microVM cloud: drivers, network, block storage, HA services, runners, clients, native apps, and the loom editor built on it.
 
@@ -6,19 +11,19 @@ Part of the **Virtualisation, cloud & network** family of the
 [pure-Go ecosystem](https://go-desktop.github.io/) — 70 modules,
 all `CGO_ENABLED=0`.
 
-## What is here
+## What is here {#what-is-here}
 
 This site is the organisation's reference index: what each module is, and where its
 API documentation lives. The API itself is generated from the source and served by
 [pkg.go.dev](https://pkg.go.dev/), which is always current with the released tags —
 duplicating it here would only create a second copy to go stale.
 
-- **[Modules](modules.md)** — every module in openweft, grouped by what it is for.
+- **[Modules]({{< relref "modules.md" >}})** — every module in openweft, grouped by what it is for.
 
 The project's own site, with the narrative introduction and the getting-started
 path, is at [openweft.github.io](https://openweft.github.io/).
 
-## What every module here is held to
+## What every module here is held to {#what-every-module-here-is-held-to}
 
 - `CGO_ENABLED=0`: no cgo, and no shelling out to a command-line tool in place of a
   library.
