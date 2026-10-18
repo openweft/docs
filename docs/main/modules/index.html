@@ -1,0 +1,415 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><link rel="icon shortcut" href=/docs/main/favicon.ico sizes=32x32><link rel=icon href=/docs/main/favicon.svg type=image/svg+xml id=favicon-svg><link rel=icon href=/docs/main/favicon-16x16.png type=image/png sizes=16x16><link rel=icon href=/docs/main/favicon-32x32.png type=image/png sizes=32x32><link rel=apple-touch-icon href=/docs/main/apple-touch-icon.png sizes=180x180><link fetchpriority=low href=/docs/main/site.webmanifest rel=manifest><title>Modules – weft docs</title><meta name=description content="ModulesThe 70 modules of openweft, grouped by what they are for. Each links to its source and to its generated API reference.
+The core Module Reference weft pkg.go.dev weft-chaos pkg.go.dev weft-doctor pkg.go.dev weft-hcl pkg.go.dev weft-proto pkg.go.dev microVMs and their drivers Module Reference weft-cidata pkg.go.dev weft-driver-dcs pkg.go.dev weft-driver-plugin pkg.go.dev weft-driver-qemu pkg.go.dev weft-driver-vmd pkg.go.dev weft-driver-vz pkg.go.dev weft-driver-wasm pkg.go.dev weft-drivers pkg.go.dev weft-firstboot pkg.go.dev weft-microvm pkg.go.dev weft-microvm-agent pkg.go.dev weft-microvm-backup pkg.go.dev weft-microvm-init pkg.go.dev weft-microvm-kernel pkg.go.dev Storage Module Reference weft-block pkg.go.dev weft-ha-block pkg.go.dev weft-nbd pkg.go.dev weft-volume-backup pkg.go.dev Network Module Reference weft-coredns pkg.go.dev weft-network pkg.go.dev weft-network-proto pkg.go.dev weft-proxy pkg.go.dev weft-router pkg.go.dev Coordination, identity and messaging Module Reference weft-dex pkg.go.dev weft-etcd pkg.go.dev weft-nats pkg.go.dev weft-slognats pkg.go.dev weft-zot pkg.go.dev High-availability services Module Reference weft-ha-forgejo pkg.go.dev weft-ha-irods pkg.go.dev weft-ha-postgresql pkg.go.dev CI runners Module Reference weft-runner-forgejo pkg.go.dev weft-runner-github pkg.go.dev weft-runner-gitlab pkg.go.dev Clients, apps and integrations Module Reference terraform-provider-weft pkg.go.dev weft-app-android pkg.go.dev weft-app-core pkg.go.dev weft-app-gtk pkg.go.dev weft-app-ios pkg.go.dev weft-app-osx pkg.go.dev weft-app-windows pkg.go.dev weft-client pkg.go.dev weft-tui pkg.go.dev weft-webui pkg.go.dev The loom editor Module Reference weft-loom-app-linux pkg.go.dev weft-loom-app-osx pkg.go.dev weft-loom-app-windows pkg.go.dev weft-loom-cpp pkg.go.dev weft-loom-golang pkg.go.dev weft-loom-gotex pkg.go.dev weft-loom-markdown pkg.go.dev weft-loom-node pkg.go.dev weft-loom-pub pkg.go.dev weft-loom-python pkg.go.dev weft-loom-rust pkg.go.dev weft-loom-server pkg.go.dev weft-loom-texlive pkg.go.dev weft-loom-theme-cnrs pkg.go.dev weft-loom-theme-dinum pkg.go.dev weft-loom-theme-ihes pkg.go.dev weft-loom-theme-ip-paris pkg.go.dev weft-loom-theme-paris-saclay pkg.go.dev weft-loom-theme-polytechnique pkg.go.dev weft-loom-themes pkg.go.dev weft-loom-workspace pkg.go.dev Descriptions live on the repositories themselves rather than being copied here, so there is one place to correct when one changes."><link rel=canonical href=https://openweft.github.io/docs/main/modules/ itemprop=url><meta property="og:title" content="Modules"><meta property="og:description" content="
+    
+      ModulesThe 70 modules of openweft, grouped by what they are for. Each links to
+its source and to its generated API reference.
+The core
+    
+	
+			
+					Module
+					Reference
+			
+	
+	
+			
+					weft
+					pkg.go.dev
+			
+			
+					weft-chaos
+					pkg.go.dev
+			
+			
+					weft-doctor
+					pkg.go.dev
+			
+			
+					weft-hcl
+					pkg.go.dev
+			
+			
+					weft-proto
+					pkg.go.dev
+			
+	
+
+microVMs and their drivers
+    
+	
+			
+					Module
+					Reference
+			
+	
+	
+			
+					weft-cidata
+					pkg.go.dev
+			
+			
+					weft-driver-dcs
+					pkg.go.dev
+			
+			
+					weft-driver-plugin
+					pkg.go.dev
+			
+			
+					weft-driver-qemu
+					pkg.go.dev
+			
+			
+					weft-driver-vmd
+					pkg.go.dev
+			
+			
+					weft-driver-vz
+					pkg.go.dev
+			
+			
+					weft-driver-wasm
+					pkg.go.dev
+			
+			
+					weft-drivers
+					pkg.go.dev
+			
+			
+					weft-firstboot
+					pkg.go.dev
+			
+			
+					weft-microvm
+					pkg.go.dev
+			
+			
+					weft-microvm-agent
+					pkg.go.dev
+			
+			
+					weft-microvm-backup
+					pkg.go.dev
+			
+			
+					weft-microvm-init
+					pkg.go.dev
+			
+			
+					weft-microvm-kernel
+					pkg.go.dev
+			
+	
+
+Storage
+    
+	
+			
+					Module
+					Reference
+			
+	
+	
+			
+					weft-block
+					pkg.go.dev
+			
+			
+					weft-ha-block
+					pkg.go.dev
+			
+			
+					weft-nbd
+					pkg.go.dev
+			
+			
+					weft-volume-backup
+					pkg.go.dev
+			
+	
+
+Network
+    
+	
+			
+					Module
+					Reference
+			
+	
+	
+			
+					weft-coredns
+					pkg.go.dev
+			
+			
+					weft-network
+					pkg.go.dev
+			
+			
+					weft-network-proto
+					pkg.go.dev
+			
+			
+					weft-proxy
+					pkg.go.dev
+			
+			
+					weft-router
+					pkg.go.dev
+			
+	
+
+Coordination, identity and messaging
+    
+	
+			
+					Module
+					Reference
+			
+	
+	
+			
+					weft-dex
+					pkg.go.dev
+			
+			
+					weft-etcd
+					pkg.go.dev
+			
+			
+					weft-nats
+					pkg.go.dev
+			
+			
+					weft-slognats
+					pkg.go.dev
+			
+			
+					weft-zot
+					pkg.go.dev
+			
+	
+
+High-availability services
+    
+	
+			
+					Module
+					Reference
+			
+	
+	
+			
+					weft-ha-forgejo
+					pkg.go.dev
+			
+			
+					weft-ha-irods
+					pkg.go.dev
+			
+			
+					weft-ha-postgresql
+					pkg.go.dev
+			
+	
+
+CI runners
+    
+	
+			
+					Module
+					Reference
+			
+	
+	
+			
+					weft-runner-forgejo
+					pkg.go.dev
+			
+			
+					weft-runner-github
+					pkg.go.dev
+			
+			
+					weft-runner-gitlab
+					pkg.go.dev
+			
+	
+
+Clients, apps and integrations
+    
+	
+			
+					Module
+					Reference
+			
+	
+	
+			
+					terraform-provider-weft
+					pkg.go.dev
+			
+			
+					weft-app-android
+					pkg.go.dev
+			
+			
+					weft-app-core
+					pkg.go.dev
+			
+			
+					weft-app-gtk
+					pkg.go.dev
+			
+			
+					weft-app-ios
+					pkg.go.dev
+			
+			
+					weft-app-osx
+					pkg.go.dev
+			
+			
+					weft-app-windows
+					pkg.go.dev
+			
+			
+					weft-client
+					pkg.go.dev
+			
+			
+					weft-tui
+					pkg.go.dev
+			
+			
+					weft-webui
+					pkg.go.dev
+			
+	
+
+The loom editor
+    
+	
+			
+					Module
+					Reference
+			
+	
+	
+			
+					weft-loom-app-linux
+					pkg.go.dev
+			
+			
+					weft-loom-app-osx
+					pkg.go.dev
+			
+			
+					weft-loom-app-windows
+					pkg.go.dev
+			
+			
+					weft-loom-cpp
+					pkg.go.dev
+			
+			
+					weft-loom-golang
+					pkg.go.dev
+			
+			
+					weft-loom-gotex
+					pkg.go.dev
+			
+			
+					weft-loom-markdown
+					pkg.go.dev
+			
+			
+					weft-loom-node
+					pkg.go.dev
+			
+			
+					weft-loom-pub
+					pkg.go.dev
+			
+			
+					weft-loom-python
+					pkg.go.dev
+			
+			
+					weft-loom-rust
+					pkg.go.dev
+			
+			
+					weft-loom-server
+					pkg.go.dev
+			
+			
+					weft-loom-texlive
+					pkg.go.dev
+			
+			
+					weft-loom-theme-cnrs
+					pkg.go.dev
+			
+			
+					weft-loom-theme-dinum
+					pkg.go.dev
+			
+			
+					weft-loom-theme-ihes
+					pkg.go.dev
+			
+			
+					weft-loom-theme-ip-paris
+					pkg.go.dev
+			
+			
+					weft-loom-theme-paris-saclay
+					pkg.go.dev
+			
+			
+					weft-loom-theme-polytechnique
+					pkg.go.dev
+			
+			
+					weft-loom-themes
+					pkg.go.dev
+			
+			
+					weft-loom-workspace
+					pkg.go.dev
+			
+	
+
+Descriptions live on the repositories themselves rather than being copied here, so
+there is one place to correct when one changes.
+    
+  "><meta property="og:type" content="
+    article
+  "><meta property="og:url" content="https://openweft.github.io/docs/main/modules/"><meta property="article:section" content><meta property="article:modified_time" content="2026-10-18T22:14:36+02:00"><meta itemprop=name content="Modules"><meta itemprop=description content="ModulesThe 70 modules of openweft, grouped by what they are for. Each links to its source and to its generated API reference.
+The core Module Reference weft pkg.go.dev weft-chaos pkg.go.dev weft-doctor pkg.go.dev weft-hcl pkg.go.dev weft-proto pkg.go.dev microVMs and their drivers Module Reference weft-cidata pkg.go.dev weft-driver-dcs pkg.go.dev weft-driver-plugin pkg.go.dev weft-driver-qemu pkg.go.dev weft-driver-vmd pkg.go.dev weft-driver-vz pkg.go.dev weft-driver-wasm pkg.go.dev weft-drivers pkg.go.dev weft-firstboot pkg.go.dev weft-microvm pkg.go.dev weft-microvm-agent pkg.go.dev weft-microvm-backup pkg.go.dev weft-microvm-init pkg.go.dev weft-microvm-kernel pkg.go.dev Storage Module Reference weft-block pkg.go.dev weft-ha-block pkg.go.dev weft-nbd pkg.go.dev weft-volume-backup pkg.go.dev Network Module Reference weft-coredns pkg.go.dev weft-network pkg.go.dev weft-network-proto pkg.go.dev weft-proxy pkg.go.dev weft-router pkg.go.dev Coordination, identity and messaging Module Reference weft-dex pkg.go.dev weft-etcd pkg.go.dev weft-nats pkg.go.dev weft-slognats pkg.go.dev weft-zot pkg.go.dev High-availability services Module Reference weft-ha-forgejo pkg.go.dev weft-ha-irods pkg.go.dev weft-ha-postgresql pkg.go.dev CI runners Module Reference weft-runner-forgejo pkg.go.dev weft-runner-github pkg.go.dev weft-runner-gitlab pkg.go.dev Clients, apps and integrations Module Reference terraform-provider-weft pkg.go.dev weft-app-android pkg.go.dev weft-app-core pkg.go.dev weft-app-gtk pkg.go.dev weft-app-ios pkg.go.dev weft-app-osx pkg.go.dev weft-app-windows pkg.go.dev weft-client pkg.go.dev weft-tui pkg.go.dev weft-webui pkg.go.dev The loom editor Module Reference weft-loom-app-linux pkg.go.dev weft-loom-app-osx pkg.go.dev weft-loom-app-windows pkg.go.dev weft-loom-cpp pkg.go.dev weft-loom-golang pkg.go.dev weft-loom-gotex pkg.go.dev weft-loom-markdown pkg.go.dev weft-loom-node pkg.go.dev weft-loom-pub pkg.go.dev weft-loom-python pkg.go.dev weft-loom-rust pkg.go.dev weft-loom-server pkg.go.dev weft-loom-texlive pkg.go.dev weft-loom-theme-cnrs pkg.go.dev weft-loom-theme-dinum pkg.go.dev weft-loom-theme-ihes pkg.go.dev weft-loom-theme-ip-paris pkg.go.dev weft-loom-theme-paris-saclay pkg.go.dev weft-loom-theme-polytechnique pkg.go.dev weft-loom-themes pkg.go.dev weft-loom-workspace pkg.go.dev Descriptions live on the repositories themselves rather than being copied here, so there is one place to correct when one changes."><meta itemprop=dateModified content="2026-10-18T22:14:36+02:00"><meta itemprop=wordCount content="224"><meta name=twitter:card content="summary"><meta name=twitter:title content="Modules"><meta name=twitter:description content="ModulesThe 70 modules of openweft, grouped by what they are for. Each links to its source and to its generated API reference.
+The core Module Reference weft pkg.go.dev weft-chaos pkg.go.dev weft-doctor pkg.go.dev weft-hcl pkg.go.dev weft-proto pkg.go.dev microVMs and their drivers Module Reference weft-cidata pkg.go.dev weft-driver-dcs pkg.go.dev weft-driver-plugin pkg.go.dev weft-driver-qemu pkg.go.dev weft-driver-vmd pkg.go.dev weft-driver-vz pkg.go.dev weft-driver-wasm pkg.go.dev weft-drivers pkg.go.dev weft-firstboot pkg.go.dev weft-microvm pkg.go.dev weft-microvm-agent pkg.go.dev weft-microvm-backup pkg.go.dev weft-microvm-init pkg.go.dev weft-microvm-kernel pkg.go.dev Storage Module Reference weft-block pkg.go.dev weft-ha-block pkg.go.dev weft-nbd pkg.go.dev weft-volume-backup pkg.go.dev Network Module Reference weft-coredns pkg.go.dev weft-network pkg.go.dev weft-network-proto pkg.go.dev weft-proxy pkg.go.dev weft-router pkg.go.dev Coordination, identity and messaging Module Reference weft-dex pkg.go.dev weft-etcd pkg.go.dev weft-nats pkg.go.dev weft-slognats pkg.go.dev weft-zot pkg.go.dev High-availability services Module Reference weft-ha-forgejo pkg.go.dev weft-ha-irods pkg.go.dev weft-ha-postgresql pkg.go.dev CI runners Module Reference weft-runner-forgejo pkg.go.dev weft-runner-github pkg.go.dev weft-runner-gitlab pkg.go.dev Clients, apps and integrations Module Reference terraform-provider-weft pkg.go.dev weft-app-android pkg.go.dev weft-app-core pkg.go.dev weft-app-gtk pkg.go.dev weft-app-ios pkg.go.dev weft-app-osx pkg.go.dev weft-app-windows pkg.go.dev weft-client pkg.go.dev weft-tui pkg.go.dev weft-webui pkg.go.dev The loom editor Module Reference weft-loom-app-linux pkg.go.dev weft-loom-app-osx pkg.go.dev weft-loom-app-windows pkg.go.dev weft-loom-cpp pkg.go.dev weft-loom-golang pkg.go.dev weft-loom-gotex pkg.go.dev weft-loom-markdown pkg.go.dev weft-loom-node pkg.go.dev weft-loom-pub pkg.go.dev weft-loom-python pkg.go.dev weft-loom-rust pkg.go.dev weft-loom-server pkg.go.dev weft-loom-texlive pkg.go.dev weft-loom-theme-cnrs pkg.go.dev weft-loom-theme-dinum pkg.go.dev weft-loom-theme-ihes pkg.go.dev weft-loom-theme-ip-paris pkg.go.dev weft-loom-theme-paris-saclay pkg.go.dev weft-loom-theme-polytechnique pkg.go.dev weft-loom-themes pkg.go.dev weft-loom-workspace pkg.go.dev Descriptions live on the repositories themselves rather than being copied here, so there is one place to correct when one changes."><link rel=preload href=/docs/main/css/compiled/main.min.7e772c8bc2e83ff8314a0de1e1afd499fe4df36ceafa335159c185585b8eb278.css as=style integrity="sha256-fncsi8LoP/gxSg3h4a/Umf5N82zq+jNRWcGFWFuOsng="><link href=/docs/main/css/compiled/main.min.7e772c8bc2e83ff8314a0de1e1afd499fe4df36ceafa335159c185585b8eb278.css rel=stylesheet integrity="sha256-fncsi8LoP/gxSg3h4a/Umf5N82zq+jNRWcGFWFuOsng="><script src=/docs/main/js/main-head.min.bbb353731723c08eaf67b231610392e3665384806ddb6bee51d4a965494c762e.js integrity="sha256-u7NTcxcjwI6vZ7IxYQOS42ZThIBt22vuUdSpZUlMdi4="></script></head><body><a href=#content class="hx:sr-only hx:focus-visible:not-sr-only hx:focus-visible:fixed hx:focus-visible:z-50 hx:focus-visible:top-2 hx:focus-visible:left-2 hx:focus-visible:bg-primary-500 hx:focus-visible:text-white hx:focus-visible:px-4 hx:focus-visible:py-2 hx:focus-visible:rounded-md hx:focus-visible:text-sm hx:focus-visible:font-medium">Skip to content</a><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden"><div class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"></div><nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-1 hx:md:gap-2 hx:h-[var(--hextra-navbar-height)] hx:px-6"><a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href=/docs/main/><span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none hx:whitespace-nowrap">weft docs</span>
+</a><button type=button aria-label=Menu aria-expanded=false class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-1 hx:rounded-sm hx:p-1 hx:active:bg-gray-400/20 hx:md:hidden hx:hextra-focus-visible-inset"><svg height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"/></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"/></g></svg></button></nav></div><div class="hx:mx-auto hx:flex hextra-max-page-width"><aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-[var(--hextra-navbar-height)] hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:sticky"><div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--hextra-navbar-height)-var(--menu-height))]"><ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden"><li class=open><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active=true><a class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500" href=/docs/main/modules/><span class="hx:min-w-0 [word-break:break-word]">Modules</span></a></div><ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li><a href=#the-core class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50">The core</a></li><li><a href=#microvms-and-their-drivers class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50">microVMs and their drivers</a></li><li><a href=#storage class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50">Storage</a></li><li><a href=#network class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50">Network</a></li><li><a href=#coordination-identity-and-messaging class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50">Coordination, identity and messaging</a></li><li><a href=#high-availability-services class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50">High-availability services</a></li><li><a href=#ci-runners class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50">CI runners</a></li><li><a href=#clients-apps-and-integrations class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50">Clients, apps and integrations</a></li><li><a href=#the-loom-editor class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50">The loom editor</a></li></ul></li></ul><ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden"><li class=open><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active=true><a class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500" href=/docs/main/modules/><span class="hx:min-w-0 [word-break:break-word]">Modules</span></a></div></li></ul></div><div class="hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation=show><div class="hx:flex hx:grow hx:flex-col"><div class="hx:flex hx:justify-items-start hx:group" data-theme=light><button title="Change theme" data-state=closed data-location=bottom class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:grow" type=button aria-label="Change theme" aria-expanded=false aria-haspopup=menu><div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height="12" class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364-.707-.707M6.343 6.343l-.707-.707m12.728.0-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden">Light</span><svg height="12" class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003.0 0012 21a9.003 9.003.0 008.354-5.646z"/></svg><span class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden">Dark</span><svg height="12" class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M11.996094 2C6.4986225 2.0192368 2.03125 6.5024993 2.03125 12c0 5.497501 4.4673725 9.980763 9.964844 10H12 12.0039c5.497471-.01924 9.964844-4.502499 9.964844-10 0-5.4975007-4.467373-9.9807632-9.964844-10H12zM12 4c4.417218.017598 7.96875 3.5822356 7.96875 8 0 4.417764-3.551532 7.982402-7.96875 8z"/></svg>
+<span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden">System</span></div></button><ul class="hextra-theme-toggle-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-lg hx:border hx:border-gray-200 hx:bg-white hx:p-1 hx:text-sm hx:shadow-lg hx:dark:border-neutral-700 hx:dark:bg-neutral-900" style="position:fixed;inset:auto auto 0 0;margin:0;min-width:100px" data-theme=light role=menu><li role=none class="hx:flex hx:flex-col"><button type=button role=menuitemradio aria-checked=true tabindex=-1 data-item=light class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0">
+<span class="hx:inline-flex hx:items-center hx:gap-2"><svg height="1em" width="1em" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364-.707-.707M6.343 6.343l-.707-.707m12.728.0-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>Light
+</span><span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden"><svg height="1em" width="1em" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></button></li><li role=none class="hx:flex hx:flex-col"><button type=button role=menuitemradio aria-checked=false tabindex=-1 data-item=dark class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0">
+<span class="hx:inline-flex hx:items-center hx:gap-2"><svg height="1em" width="1em" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003.0 0012 21a9.003 9.003.0 008.354-5.646z"/></svg>Dark
+</span><span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden"><svg height="1em" width="1em" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></button></li><li role=none class="hx:flex hx:flex-col"><button type=button role=menuitemradio aria-checked=false tabindex=-1 data-item=system class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0">
+<span class="hx:inline-flex hx:items-center hx:gap-2"><svg height="1em" width="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M11.996094 2C6.4986225 2.0192368 2.03125 6.5024993 2.03125 12c0 5.497501 4.4673725 9.980763 9.964844 10H12 12.0039c5.497471-.01924 9.964844-4.502499 9.964844-10 0-5.4975007-4.467373-9.9807632-9.964844-10H12zM12 4c4.417218.017598 7.96875 3.5822356 7.96875 8 0 4.417764-3.551532 7.982402-7.96875 8z"/></svg>
+System
+</span><span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden"><svg height="1em" width="1em" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></button></li></ul></div></div></div></aside><nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents"><div class="hextra-scrollbar hx:sticky hx:top-[var(--hextra-navbar-height)] hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--hextra-navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6"><a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href=#the-core>The core</a></li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6"><a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href=#microvms-and-their-drivers>microVMs and their drivers</a></li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6"><a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href=#storage>Storage</a></li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6"><a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href=#network>Network</a></li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6"><a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href=#coordination-identity-and-messaging>Coordination, identity and messaging</a></li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6"><a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href=#high-availability-services>High-availability services</a></li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6"><a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href=#ci-runners>CI runners</a></li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6"><a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href=#clients-apps-and-integrations>Clients, apps and integrations</a></li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6"><a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href=#the-loom-editor>The loom editor</a></li></ul><div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:inline-block hx:rounded-sm hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50 hx:hextra-focus-visible-inset" href=https://github.com/openweft/edit/main/content/en/en/modules.md target=_blank rel=noreferrer>Edit this page on GitHub →</a>
+<button id=backToTop tabindex=-1 class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+<span>Scroll to top</span>
+<svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg></button></div></div></nav><article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--hextra-navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]"><main id=content class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12"><div class=content><div class="hx:flex hx:flex-col hx:sm:flex-row hx:items-start hx:sm:items-center hx:sm:justify-between hx:gap-4 hx:mb-4"><h1 class="hextra-page-title hx:mb-0">Modules</h1></div><h1 data-hextra-search-id=modules>Modules</h1><p>The 70 modules of <strong>openweft</strong>, grouped by what they are for. Each links to
+its source and to its generated API reference.</p><h2 data-hextra-search-id=the-core>The core<span class="hx:absolute hx:-mt-20" id=the-core></span>
+<a href=#the-core class=subheading-anchor aria-label="Permalink for this section"></a></h2><table><thead><tr><th>Module</th><th>Reference</th></tr></thead><tbody><tr><td><a href=https://github.com/openweft/weft target=_blank rel=noopener><code>weft</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-chaos target=_blank rel=noopener><code>weft-chaos</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-chaos target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-doctor target=_blank rel=noopener><code>weft-doctor</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-doctor target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-hcl target=_blank rel=noopener><code>weft-hcl</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-hcl target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-proto target=_blank rel=noopener><code>weft-proto</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-proto target=_blank rel=noopener>pkg.go.dev</a></td></tr></tbody></table><h2 data-hextra-search-id=microvms-and-their-drivers>microVMs and their drivers<span class="hx:absolute hx:-mt-20" id=microvms-and-their-drivers></span>
+<a href=#microvms-and-their-drivers class=subheading-anchor aria-label="Permalink for this section"></a></h2><table><thead><tr><th>Module</th><th>Reference</th></tr></thead><tbody><tr><td><a href=https://github.com/openweft/weft-cidata target=_blank rel=noopener><code>weft-cidata</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-cidata target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-driver-dcs target=_blank rel=noopener><code>weft-driver-dcs</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-driver-dcs target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-driver-plugin target=_blank rel=noopener><code>weft-driver-plugin</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-driver-plugin target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-driver-qemu target=_blank rel=noopener><code>weft-driver-qemu</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-driver-qemu target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-driver-vmd target=_blank rel=noopener><code>weft-driver-vmd</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-driver-vmd target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-driver-vz target=_blank rel=noopener><code>weft-driver-vz</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-driver-vz target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-driver-wasm target=_blank rel=noopener><code>weft-driver-wasm</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-driver-wasm target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-drivers target=_blank rel=noopener><code>weft-drivers</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-drivers target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-firstboot target=_blank rel=noopener><code>weft-firstboot</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-firstboot target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-microvm target=_blank rel=noopener><code>weft-microvm</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-microvm target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-microvm-agent target=_blank rel=noopener><code>weft-microvm-agent</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-microvm-agent target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-microvm-backup target=_blank rel=noopener><code>weft-microvm-backup</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-microvm-backup target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-microvm-init target=_blank rel=noopener><code>weft-microvm-init</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-microvm-init target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-microvm-kernel target=_blank rel=noopener><code>weft-microvm-kernel</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-microvm-kernel target=_blank rel=noopener>pkg.go.dev</a></td></tr></tbody></table><h2 data-hextra-search-id=storage>Storage<span class="hx:absolute hx:-mt-20" id=storage></span>
+<a href=#storage class=subheading-anchor aria-label="Permalink for this section"></a></h2><table><thead><tr><th>Module</th><th>Reference</th></tr></thead><tbody><tr><td><a href=https://github.com/openweft/weft-block target=_blank rel=noopener><code>weft-block</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-block target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-ha-block target=_blank rel=noopener><code>weft-ha-block</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-ha-block target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-nbd target=_blank rel=noopener><code>weft-nbd</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-nbd target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-volume-backup target=_blank rel=noopener><code>weft-volume-backup</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-volume-backup target=_blank rel=noopener>pkg.go.dev</a></td></tr></tbody></table><h2 data-hextra-search-id=network>Network<span class="hx:absolute hx:-mt-20" id=network></span>
+<a href=#network class=subheading-anchor aria-label="Permalink for this section"></a></h2><table><thead><tr><th>Module</th><th>Reference</th></tr></thead><tbody><tr><td><a href=https://github.com/openweft/weft-coredns target=_blank rel=noopener><code>weft-coredns</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-coredns target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-network target=_blank rel=noopener><code>weft-network</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-network target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-network-proto target=_blank rel=noopener><code>weft-network-proto</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-network-proto target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-proxy target=_blank rel=noopener><code>weft-proxy</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-proxy target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-router target=_blank rel=noopener><code>weft-router</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-router target=_blank rel=noopener>pkg.go.dev</a></td></tr></tbody></table><h2 data-hextra-search-id=coordination-identity-and-messaging>Coordination, identity and messaging<span class="hx:absolute hx:-mt-20" id=coordination-identity-and-messaging></span>
+<a href=#coordination-identity-and-messaging class=subheading-anchor aria-label="Permalink for this section"></a></h2><table><thead><tr><th>Module</th><th>Reference</th></tr></thead><tbody><tr><td><a href=https://github.com/openweft/weft-dex target=_blank rel=noopener><code>weft-dex</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-dex target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-etcd target=_blank rel=noopener><code>weft-etcd</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-etcd target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-nats target=_blank rel=noopener><code>weft-nats</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-nats target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-slognats target=_blank rel=noopener><code>weft-slognats</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-slognats target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-zot target=_blank rel=noopener><code>weft-zot</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-zot target=_blank rel=noopener>pkg.go.dev</a></td></tr></tbody></table><h2 data-hextra-search-id=high-availability-services>High-availability services<span class="hx:absolute hx:-mt-20" id=high-availability-services></span>
+<a href=#high-availability-services class=subheading-anchor aria-label="Permalink for this section"></a></h2><table><thead><tr><th>Module</th><th>Reference</th></tr></thead><tbody><tr><td><a href=https://github.com/openweft/weft-ha-forgejo target=_blank rel=noopener><code>weft-ha-forgejo</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-ha-forgejo target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-ha-irods target=_blank rel=noopener><code>weft-ha-irods</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-ha-irods target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-ha-postgresql target=_blank rel=noopener><code>weft-ha-postgresql</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-ha-postgresql target=_blank rel=noopener>pkg.go.dev</a></td></tr></tbody></table><h2 data-hextra-search-id=ci-runners>CI runners<span class="hx:absolute hx:-mt-20" id=ci-runners></span>
+<a href=#ci-runners class=subheading-anchor aria-label="Permalink for this section"></a></h2><table><thead><tr><th>Module</th><th>Reference</th></tr></thead><tbody><tr><td><a href=https://github.com/openweft/weft-runner-forgejo target=_blank rel=noopener><code>weft-runner-forgejo</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-runner-forgejo target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-runner-github target=_blank rel=noopener><code>weft-runner-github</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-runner-github target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-runner-gitlab target=_blank rel=noopener><code>weft-runner-gitlab</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-runner-gitlab target=_blank rel=noopener>pkg.go.dev</a></td></tr></tbody></table><h2 data-hextra-search-id=clients-apps-and-integrations>Clients, apps and integrations<span class="hx:absolute hx:-mt-20" id=clients-apps-and-integrations></span>
+<a href=#clients-apps-and-integrations class=subheading-anchor aria-label="Permalink for this section"></a></h2><table><thead><tr><th>Module</th><th>Reference</th></tr></thead><tbody><tr><td><a href=https://github.com/openweft/terraform-provider-weft target=_blank rel=noopener><code>terraform-provider-weft</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/terraform-provider-weft target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-app-android target=_blank rel=noopener><code>weft-app-android</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-app-android target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-app-core target=_blank rel=noopener><code>weft-app-core</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-app-core target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-app-gtk target=_blank rel=noopener><code>weft-app-gtk</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-app-gtk target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-app-ios target=_blank rel=noopener><code>weft-app-ios</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-app-ios target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-app-osx target=_blank rel=noopener><code>weft-app-osx</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-app-osx target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-app-windows target=_blank rel=noopener><code>weft-app-windows</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-app-windows target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-client target=_blank rel=noopener><code>weft-client</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-client target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-tui target=_blank rel=noopener><code>weft-tui</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-tui target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-webui target=_blank rel=noopener><code>weft-webui</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-webui target=_blank rel=noopener>pkg.go.dev</a></td></tr></tbody></table><h2 data-hextra-search-id=the-loom-editor>The loom editor<span class="hx:absolute hx:-mt-20" id=the-loom-editor></span>
+<a href=#the-loom-editor class=subheading-anchor aria-label="Permalink for this section"></a></h2><table><thead><tr><th>Module</th><th>Reference</th></tr></thead><tbody><tr><td><a href=https://github.com/openweft/weft-loom-app-linux target=_blank rel=noopener><code>weft-loom-app-linux</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-app-linux target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-app-osx target=_blank rel=noopener><code>weft-loom-app-osx</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-app-osx target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-app-windows target=_blank rel=noopener><code>weft-loom-app-windows</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-app-windows target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-cpp target=_blank rel=noopener><code>weft-loom-cpp</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-cpp target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-golang target=_blank rel=noopener><code>weft-loom-golang</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-golang target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-gotex target=_blank rel=noopener><code>weft-loom-gotex</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-gotex target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-markdown target=_blank rel=noopener><code>weft-loom-markdown</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-markdown target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-node target=_blank rel=noopener><code>weft-loom-node</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-node target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-pub target=_blank rel=noopener><code>weft-loom-pub</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-pub target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-python target=_blank rel=noopener><code>weft-loom-python</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-python target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-rust target=_blank rel=noopener><code>weft-loom-rust</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-rust target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-server target=_blank rel=noopener><code>weft-loom-server</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-server target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-texlive target=_blank rel=noopener><code>weft-loom-texlive</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-texlive target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-theme-cnrs target=_blank rel=noopener><code>weft-loom-theme-cnrs</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-theme-cnrs target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-theme-dinum target=_blank rel=noopener><code>weft-loom-theme-dinum</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-theme-dinum target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-theme-ihes target=_blank rel=noopener><code>weft-loom-theme-ihes</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-theme-ihes target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-theme-ip-paris target=_blank rel=noopener><code>weft-loom-theme-ip-paris</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-theme-ip-paris target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-theme-paris-saclay target=_blank rel=noopener><code>weft-loom-theme-paris-saclay</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-theme-paris-saclay target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-theme-polytechnique target=_blank rel=noopener><code>weft-loom-theme-polytechnique</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-theme-polytechnique target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-themes target=_blank rel=noopener><code>weft-loom-themes</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-themes target=_blank rel=noopener>pkg.go.dev</a></td></tr><tr><td><a href=https://github.com/openweft/weft-loom-workspace target=_blank rel=noopener><code>weft-loom-workspace</code></a></td><td><a href=https://pkg.go.dev/github.com/openweft/weft-loom-workspace target=_blank rel=noopener>pkg.go.dev</a></td></tr></tbody></table><p>Descriptions live on the repositories themselves rather than being copied here, so
+there is one place to correct when one changes.</p></div><div class=hx:mt-16></div></main></article></div><footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent"><div class="hextra-custom-footer hextra-max-footer-width hx:mx-auto hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400"></div></footer><dialog id=hextra-search-dialog class=hextra-search-dialog aria-label=Search... zgotmplz><div class=hextra-search><div class=hextra-search-input-wrapper><svg class="hextra-search-input-icon" focusable="false" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5A7 7 0 113 10a7 7 0 0114 0z"/></svg><input class=hextra-search-input type=search role=combobox autocomplete=off autocorrect=off autocapitalize=off spellcheck=false placeholder=Search... aria-label=Search... aria-controls=hextra-search-results aria-expanded=false><button type=button class=hextra-search-input-kbd data-search-close aria-label=Close>ESC</button></div><div class=hextra-search-results-viewport data-search-viewport><div class="hextra-search-results-inner hextra-scrollbar" data-search-inner><ul id=hextra-search-results class=hextra-search-results role=listbox aria-label="Search results"></ul><div class=hextra-search-empty data-search-empty hidden>No results found.</div></div></div><div class="hextra-search-status hx:sr-only" aria-live=polite role=status></div></div></dialog><script defer src=/docs/main/js/main.min.aa67dc0070adc274a270dfef68169a5de3b054fe4432ee3b3613cc8657076b53.js integrity="sha256-qmfcAHCtwnSicN/vaBaaXeOwVP5EMu47NhPMhlcHa1M="></script><script defer src=/docs/main/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin=anonymous></script><script defer src=/docs/main/en.search.min.c2d3e20351f408f581f532f0f205d4e9229c26eb1ed2bedf35ba535bfd6728c4.js integrity="sha256-wtPiA1H0CPWB9TLw8gXU6SKcJuse0r7fNbpTW/1nKMQ="></script><script defer src=/docs/main/en.search-dialog.min.fda123910557b5b3a328696105af51f85abc3cfc6784387c49b11b5b857b256f.js integrity="sha256-/aEjkQVXtbOjKGlhBa9R+Fq8PPxnhDh8SbEbW4V7JW8="></script></body></html>
