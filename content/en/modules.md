@@ -68,13 +68,25 @@ its source and to its generated API reference.
 
 ## High-availability services {#high-availability-services}
 
-`weft-ha-forgejo` (v0.6.0) and `weft-ha-irods` (v0.5.0) take every secret by
+`weft-ha-forgejo` (v0.7.1) and `weft-ha-irods` (v0.6.0) take every secret by
 reference: each secret flag has a `--<name>-from <ref>` twin (for example
 `--admin-password-from systemd-creds:admin-password`), resolved with
 `go-authn/secretsource` from `systemd-creds:`, `keychain:`, `keepassxc:` or
 `file:`. The plain `--<name>` flag still works for one minor release, is
 deprecated because its value is visible in `ps`, and is mutually exclusive
 with its twin.
+
+The secrets each agent seeds into etcd (Forgejo's shared secret key and
+tokens, iRODS's shared zone secrets) are sealed before they are written:
+AES-256-GCM under a key derived with HKDF-SHA256 from a cluster key given with
+`--etcd-seal-key-from <ref>` (at least 32 bytes, same reference schemes), with
+the etcd path as authenticated data. The agent refuses to start without the
+flag. To rotate, start the agents with the new key and
+`--etcd-seal-old-key-from <ref>`; each value is re-sealed on first read. Values
+stored in clear by an earlier version are sealed on first read and the etcd
+history is then compacted. Upgrade every node in the same window. Not covered:
+the write-ahead log and snapshots written before the upgrade (until defragmented),
+the transport to etcd, and anyone who holds the cluster key.
 
 | Module | Reference |
 | --- | --- |
