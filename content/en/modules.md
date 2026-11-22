@@ -68,6 +68,14 @@ its source and to its generated API reference.
 
 ## High-availability services {#high-availability-services}
 
+`weft-ha-forgejo` (v0.6.0) and `weft-ha-irods` (v0.5.0) take every secret by
+reference: each secret flag has a `--<name>-from <ref>` twin (for example
+`--admin-password-from systemd-creds:admin-password`), resolved with
+`go-authn/secretsource` from `systemd-creds:`, `keychain:`, `keepassxc:` or
+`file:`. The plain `--<name>` flag still works for one minor release, is
+deprecated because its value is visible in `ps`, and is mutually exclusive
+with its twin.
+
 | Module | Reference |
 | --- | --- |
 | [`weft-ha-forgejo`](https://github.com/openweft/weft-ha-forgejo) | [pkg.go.dev](https://pkg.go.dev/github.com/openweft/weft-ha-forgejo) |
