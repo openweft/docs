@@ -68,7 +68,7 @@ its source and to its generated API reference.
 
 ## High-availability services {#high-availability-services}
 
-`weft-ha-forgejo` (v0.7.1) and `weft-ha-irods` (v0.6.0) take every secret by
+`weft-ha-forgejo` (v0.8.0) and `weft-ha-irods` (v0.7.0) take every secret by
 reference: each secret flag has a `--<name>-from <ref>` twin (for example
 `--admin-password-from systemd-creds:admin-password`), resolved with
 `go-authn/secretsource` from `systemd-creds:`, `keychain:`, `keepassxc:` or
@@ -86,7 +86,21 @@ flag. To rotate, start the agents with the new key and
 stored in clear by an earlier version are sealed on first read and the etcd
 history is then compacted. Upgrade every node in the same window. Not covered:
 the write-ahead log and snapshots written before the upgrade (until defragmented),
-the transport to etcd, and anyone who holds the cluster key.
+and anyone who holds the cluster key.
+
+Since `weft-ha-forgejo` v0.8.0 and `weft-ha-irods` v0.7.0 the connection to
+etcd is secured too, so that nobody on the network can read the sealed blobs
+or delete or overwrite the keys (leader election, seeded configuration). Use
+`https://` endpoints with `--etcd-ca <pem>` (the CA that signed the etcd
+servers; default: system roots), and for mutual TLS `--etcd-cert <pem>` with
+`--etcd-client-key-from <ref>`. etcd user authentication takes `--etcd-user
+<name>` with `--etcd-password-from <ref>`. The client key and the password are
+accepted by secret reference only; the CA and the certificate are public paths.
+TLS 1.2 is the minimum and the server certificate is always verified. **Breaking
+change (pre-v1, so a minor release):** a plaintext endpoint (`http://`, or a
+bare `host:port` without TLS material) is refused unless
+`--etcd-insecure-plaintext` is given, which is meant for a throwaway
+development etcd only.
 
 | Module | Reference |
 | --- | --- |
