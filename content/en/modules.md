@@ -68,7 +68,7 @@ its source and to its generated API reference.
 
 ## High-availability services {#high-availability-services}
 
-`weft-ha-forgejo` (v0.8.0) and `weft-ha-irods` (v0.9.1) take every secret by
+`weft-ha-forgejo` (v0.8.0) and `weft-ha-irods` (v0.9.2) take every secret by
 reference: each secret flag has a `--<name>-from <ref>` twin (for example
 `--admin-password-from systemd-creds:admin-password`), resolved with
 `go-authn/secretsource` from `systemd-creds:`, `keychain:`, `keepassxc:` or
@@ -106,7 +106,9 @@ Key installation (`weft-ha-irods` v0.9.0 and later): on every tick the agent
 merges the negotiation key and the zone key it read from etcd into
 `/etc/irods/server_config.json` (`negotiation_key`, `zone_key`), because iRODS 5
 reads them only from that file. iRODS 5 has no control-plane key, so none is
-installed (since v0.9.1 none is minted either). The file is replaced atomically
+installed (since v0.9.1 none is minted, and since v0.9.2 a leftover one is
+deleted from etcd on the next tick; etcd keeps old revisions until compaction
+and defragmentation). The file is replaced atomically
 (temp file, fsync, rename), mode 0600, owned by the account given with
 `--server-config-owner` (default `irods`; `--server-config` defaults to the path
 above), and every other field is kept. The agent refuses a file or directory
