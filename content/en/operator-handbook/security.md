@@ -95,8 +95,8 @@ carries only `*_ref` fields holding a secret ID.
 
 - **Identity.** The caller is the CID the host bound at StartVM, mapped to
   its pod; the guest's own claims are never read. When the host holds a
-  per-boot token for the pod it is compared in constant time (KVM holds none
-  today, so identity there is CID-only; a presented token with none held is
+  per-boot token for the pod it is compared in constant time (see
+  [Boot token](#guest-secrets-boot-token); a presented token with none held is
   refused).
 - **Authorization.** Each pod has a table in cluster state (`guestsecrets`)
   mapping the secret IDs it may fetch to a
@@ -104,6 +104,7 @@ carries only `*_ref` fields holding a secret ID.
   rotation version. The guest names an ID and never supplies a reference.
   Unknown IDs, forbidden IDs and unbound CIDs all return `PermissionDenied`.
   The table is removed when the pod spec is cleared or the VM is unregistered.
+  Since weft v0.11.0 the table is derived, not set by hand (next section).
 - **Request.** `secret_id` (`[a-z0-9][a-z0-9._-]{0,62}`), `boot_token` (empty
   or exactly 32 bytes), `known_version`. The response holds `value` (at most
   64 KiB), `version`, and `unchanged` (true, with no value, when
@@ -114,6 +115,44 @@ carries only `*_ref` fields holding a secret ID.
 - **Limits.** 10 fetches per second and 600 per hour per VM, 10 s per call.
 - **Audit.** One line per fetch with pod, CID, ID, version and outcome; never
   the value or the token.
+
+### Granting secrets to a pod {#guest-secrets-grants}
+
+Needs weft v0.11.0 and weft-proto v0.25.0. An admin maps each secret ID to a
+reference (never a value), then publishes the pod spec; the grants follow from
+the IDs the spec names (`wireguard.private_key_ref`, the CubeFS
+`access_key_ref` / `secret_key_ref`):
+
+- `SetGuestSecretRef(secret_id, ref)` returns the new version (it increases on
+  every change, so a rotation reaches guests through `known_version`).
+  `DeleteGuestSecretRef(secret_id)` and `ListGuestSecretRefs()` (IDs, refs,
+  versions; never values) complete the set. All three are admin-only.
+- A reference is one of `file:` (absolute, clean path), `keychain:` or
+  `systemd-creds:`; anything else, including an inline value, is refused.
+- `SetPodSpec` refuses (`FailedPrecondition`) a spec that names an ID with no
+  reference, or that carries an inline key next to its reference. On success
+  the pod's grants are replaced by exactly the IDs the spec names. A spec
+  naming none revokes the pod's grants; clearing the spec revokes them too.
+- Changing or deleting a reference re-grants or revokes every pod that uses
+  it. The version counter is local to one control-plane process.
+- NATS credentials from loom must appear in the pod spec's share mounts to be
+  granted.
+- VMs run by the vmd or wasm drivers have no vsock: a pod carrying secrets is
+  refused at StartVM instead of running without them.
+
+### Boot token {#guest-secrets-boot-token}
+
+On a driver that supports it (QEMU/KVM from weft-driver-qemu v0.8.0), StartVM
+generates a random 32-byte token, kept in memory on the host and handed to
+QEMU through a pipe as an `fw_cfg` file (`opt/org.weft/boot-token`). It is
+never in the command line, the environment or on disk, and is wiped when the
+VM stops or is unregistered. The guest reads it once at boot from
+`/sys/firmware/qemu_fw_cfg/by_name/opt/org.weft/boot-token/raw` (root-only;
+needs `CONFIG_FW_CFG_SYSFS` or `modprobe qemu_fw_cfg`), keeps the 32 bytes in
+memory and sends them as `FetchRequest.boot_token`. Fetch then requires the
+CID and the token. A driver that predates the feature answers `Unimplemented`:
+weft logs a warning and starts the VM with CID-only identity. Apple VZ does
+not yet serve this plane on the host side.
 
 ## Cross-references {#cross-references}
 
