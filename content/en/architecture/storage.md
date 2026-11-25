@@ -62,6 +62,18 @@ The plaintext variables (`WEFT_BACKUP_PASSPHRASE`, `WEFT_SFTP_PASSWORD`,
 with a deprecation warning and are removed in the next minor release; setting
 both forms of one secret is an error.
 
+Since v0.4.0, `s3://` targets follow the same rule:
+`WEFT_BACKUP_S3_SECRET_ACCESS_KEY_FROM`, `WEFT_BACKUP_S3_SESSION_TOKEN_FROM` and
+`WEFT_BACKUP_S3_ACCESS_KEY_ID_FROM` are handed to the AWS SDK as an explicit
+static credentials provider. The plaintext `AWS_SECRET_ACCESS_KEY`,
+`AWS_SESSION_TOKEN` and `AWS_ACCESS_KEY_ID` still work with a deprecation
+warning (captured, then unset) and are removed in the next minor release. With
+none of them set, the SDK default chain (shared credentials file, IAM role,
+instance profile, web identity) is unchanged. A password embedded in an
+`sftp://user:pass@host/…` URL also warns in v0.4.0 and will be refused in the
+next minor release: use `WEFT_SFTP_PASSWORD_FROM`. Error messages and logs
+never print a URL's password.
+
 ## Block volumes — reflink CoW {#block-volumes-reflink-cow}
 
 Cloning a VM's disk uses copy-on-write on every host filesystem that
