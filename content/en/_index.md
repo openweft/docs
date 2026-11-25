@@ -19,6 +19,7 @@ API documentation lives. The API itself is generated from the source and served 
 duplicating it here would only create a second copy to go stale.
 
 - **[Modules]({{< relref "modules.md" >}})** — every module in openweft, grouped by what it is for.
+- **[Platform guide]({{< relref "overview.md" >}})** — getting started, architecture, operations (bring-up, infra services, floating IPs, HA network), the operator handbook, and the CLI and API reference.
 
 The project's own site, with the narrative introduction and the getting-started
 path, is at [openweft.github.io](https://openweft.github.io/).
