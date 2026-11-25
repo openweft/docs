@@ -86,6 +86,35 @@ Every RPC server-side passes through the auth interceptor ; the
 INFO level. Forward agent logs to your SIEM via the systemd journal
 exporter of your choice.
 
+## Guest secrets {#guest-secrets}
+
+A microVM fetches its secrets (a CubeFS key pair, a WireGuard private key)
+over the guest-only vsock server with `weft.guest.v1.GuestSecrets/Fetch`
+(weft v0.10.0, weft-proto v0.24.0), never from the pod spec. The pod spec
+carries only `*_ref` fields holding a secret ID.
+
+- **Identity.** The caller is the CID the host bound at StartVM, mapped to
+  its pod; the guest's own claims are never read. When the host holds a
+  per-boot token for the pod it is compared in constant time (KVM holds none
+  today, so identity there is CID-only; a presented token with none held is
+  refused).
+- **Authorization.** Each pod has a table in cluster state (`guestsecrets`)
+  mapping the secret IDs it may fetch to a
+  [secretsource](https://github.com/go-authn/secretsource) reference and a
+  rotation version. The guest names an ID and never supplies a reference.
+  Unknown IDs, forbidden IDs and unbound CIDs all return `PermissionDenied`.
+  The table is removed when the pod spec is cleared or the VM is unregistered.
+- **Request.** `secret_id` (`[a-z0-9][a-z0-9._-]{0,62}`), `boot_token` (empty
+  or exactly 32 bytes), `known_version`. The response holds `value` (at most
+  64 KiB), `version`, and `unchanged` (true, with no value, when
+  `known_version` equals the current version).
+- **Handling.** The reference is resolved at request time; nothing is cached
+  or written to disk, and the response value is wiped after it is sent. The
+  guest should clear it after use.
+- **Limits.** 10 fetches per second and 600 per hour per VM, 10 s per call.
+- **Audit.** One line per fetch with pod, CID, ID, version and outcome; never
+  the value or the token.
+
 ## Cross-references {#cross-references}
 
 - [Backup & restore]({{< relref "backup-and-restore.md" >}}) — dex state survival.
