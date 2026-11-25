@@ -48,6 +48,20 @@ backups are Longhorn-native ; the passthrough / file paths offer
 neither — they exist for workloads that explicitly trade replication
 for bandwidth.
 
+### Backup secrets {#backup-secrets}
+
+Encrypted backups (AEAD, Argon2id key derivation) and `sftp://` targets need
+secrets in the `weft-block` daemon. Since `weft-block` v0.3.0 they are given
+by reference, never as plaintext environment variables (visible in
+`/proc/<pid>/environ` and inherited by child processes): set
+`WEFT_BACKUP_PASSPHRASE_FROM`, `WEFT_SFTP_PASSWORD_FROM` or
+`WEFT_SFTP_KEY_PASSPHRASE_FROM` to a `go-authn/secretsource` reference such as
+`systemd-creds:backup-passphrase` or `file:/etc/weft/backup.pass` (mode 0600).
+The plaintext variables (`WEFT_BACKUP_PASSPHRASE`, `WEFT_SFTP_PASSWORD`,
+`WEFT_SFTP_KEY_PASSPHRASE`, `WEFT_BACKUP_PASSPHRASE_ENV`) still work in v0.3.0
+with a deprecation warning and are removed in the next minor release; setting
+both forms of one secret is an error.
+
 ## Block volumes — reflink CoW {#block-volumes-reflink-cow}
 
 Cloning a VM's disk uses copy-on-write on every host filesystem that
